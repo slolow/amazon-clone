@@ -12,7 +12,8 @@ export const Header = () => {
                 alignItems: "center",
                 backgroundColor: theme.palette.primary.main,
                 color: theme.palette.text.secondary,
-                padding: "0 2%"
+                padding: "0 2%",
+                fontFamily: theme.typography.fontFamily,
         }}>
 
             <div id="headerLogo"
@@ -56,7 +57,7 @@ export const Header = () => {
                     <span>Your</span>
                     <span>Shop</span>
                 </div>
-                
+
                 <ShoppingCart />
             </div>
         </header>

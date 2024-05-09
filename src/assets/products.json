@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "title": "orange nike sneaker",
+        "price": 100,
+        "rating": 3,
+        "imgSrc": "https://cdn.idealo.com/folder/Product/203758/7/203758731/s1_produktbild_gross/nike-air-force-1-low-safety-orange-summit-white.jpg",
+        "imgAlt": "orange nike sneaker"
+    },
+    {
+        "id": 2,
+        "title": "blue mac",
+        "price": 1100,
+        "rating": 2,
+        "imgSrc": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-imac-24-no-id-blue-2021_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1638564542000",
+        "imgAlt": "blue mac"
+    },
+    {
+        "id": 3,
+        "title": "orange ipod classic",
+        "price": 239,
+        "rating": 5,
+        "imgSrc": "https://www.decalgirl.com/cdn/shop/files/ipc-ss-orn.jpg?v=1708576883",
+        "imgAlt": "orange ipod classic"
+    }, 
+    {
+        "id": 4,
+        "title": "Awaken, My Love! - Childish Gambino",
+        "price": 14,
+        "rating": 5,
+        "imgSrc": "https://i.pinimg.com/564x/c2/ae/a9/c2aea95c0ca8caaabe8620a4816df443.jpg",
+        "imgAlt": "Awaken, My Love! - Childish Gambino"
+    },
+    {
+        "id": 5,
+        "title": "basketball",
+        "price": 80,
+        "rating": 4,
+        "imgSrc": "https://pimage.sport-thieme.de/zoom-generic/305-8901?scale=1904,1904",
+        "imgAlt": "basketball"
+    },
+    {
+        "id": 6,
+        "title": "totoro soft toy",
+        "price": 23,
+        "rating": 5,
+        "imgSrc": "https://i.ebayimg.com/images/g/XG4AAOSwgtddpAJB/s-l1600.jpg",
+        "imgAlt": "totoro soft toy"
+    },
+    {
+        "id": 7,
+        "title": "waterpistol",
+        "price": 1.99,
+        "rating": 3,
+        "imgSrc": "https://media.istockphoto.com/id/168718441/de/foto/orange-wasserpistole.jpg?s=170667a&w=0&k=20&c=LiDEe1fpKzUhGHPn0ql1S1zH-plEG-ctppeH3ysM_1w=",
+        "imgAlt": "orange waterpistol"
+    },
+    {
+        "id": 8,
+        "title": "hubba bubba",
+        "price": 2.89,
+        "rating": 2,
+        "imgSrc": "https://img.rewe-static.de/0022082/8133590_digital-image.png?impolicy=s-products&imwidth=1080&output-format=image/webp",
+        "imgAlt": "hubba bubba"
+    },
+    {
+        "id": 9,
+        "title": "tangerine",
+        "price": 2.39,
+        "rating": 1,
+        "imgSrc": "https://img.rewe-static.de/6214495/3136180_digital-image.png?impolicy=s-products&imwidth=1080&output-format=image/webp",
+        "imgAlt": "tangerine"
+    }
+]
