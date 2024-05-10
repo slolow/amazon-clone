@@ -2,6 +2,7 @@ import { useTheme } from '@emotion/react';
 import { HeaderLogo } from './HeaderLogo';
 import { SearchBar } from './SearchBar';
 import { ShoppingCart } from './ShoppingCart';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
     const theme = useTheme();
@@ -15,14 +16,15 @@ export const Header = () => {
                 padding: "0 2%",
                 fontFamily: theme.typography.fontFamily,
         }}>
-
-            <div id="headerLogo"
-                style={{
-                    width: "15%"
-                }}
-            >
-                <HeaderLogo />
-            </div>
+            <Link to={'/'} style={{ textDecoration: "none", color: theme.palette.text.secondary, }}>
+                <div id="headerLogo"
+                    style={{
+                        width: "15%"
+                    }}
+                >
+                    <HeaderLogo />
+                </div>
+            </Link>
 
             <div id="searchBar"
                 style={{
@@ -58,7 +60,9 @@ export const Header = () => {
                     <span>Shop</span>
                 </div>
 
-                <ShoppingCart />
+                <Link to={'/checkout'} style={{ textDecoration: "none", color: theme.palette.text.secondary, }}>
+                    <ShoppingCart />
+                </Link>
             </div>
         </header>
     )

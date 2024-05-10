@@ -1,8 +1,10 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { blue, orange, grey } from '@mui/material/colors';
 import './App.css'
-import { Header } from './components/Header';
 import { Home } from './pages/Home';
+import { Checkout } from './pages/Checkout';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Layout } from './pages/Layout';
 
 const theme = createTheme({
   typography: {
@@ -28,12 +30,27 @@ const theme = createTheme({
   },
 });
 
+const router = createBrowserRouter([
+  {
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/checkout",
+        element: <Checkout />
+      }
+    ]
+  }
+]);
+
 const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Header />
-      <Home />
+      <RouterProvider router={router} />
     </ThemeProvider>
   )
 }
