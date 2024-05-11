@@ -5,6 +5,8 @@ import { Home } from './pages/Home';
 import { Checkout } from './pages/Checkout';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Layout } from './pages/Layout';
+import { reducer, initialState } from './data_layer/reducer';
+import { StateProvider } from './data_layer/StateProvider';
 
 const theme = createTheme({
   typography: {
@@ -50,7 +52,9 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <RouterProvider router={router} />
+      <StateProvider reducer={reducer} initialState={initialState}>
+        <RouterProvider router={router} />
+      </StateProvider>
     </ThemeProvider>
   )
 }
