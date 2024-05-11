@@ -2,8 +2,9 @@ import { useTheme } from '@emotion/react';
 import { Button, type ButtonProps  } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { styled } from '@mui/material/styles';
+import { useStateReducer } from '../data_layer/useStateReducer';
 
-type ProductProps = {
+export type ProductProps = {
     title: string;
     price: number;
     rating: number;
@@ -20,6 +21,20 @@ const ShopProductButton = styled(Button)<ButtonProps>(() => ({
 
 export const Product = ({ title, price, rating, imgSrc, imgAlt }: ProductProps) => {
     const theme = useTheme();
+    const [, dispatch] = useStateReducer();
+
+    const addToShoppingCart = () => {
+        dispatch({
+            type: 'ADD_TO_SHOPPING_CART',
+            item: {
+                title,
+                price,
+                rating,
+                imgSrc,
+                imgAlt,
+            }
+        })
+    }
 
     return (
         <div id="productContainer"
@@ -45,7 +60,14 @@ export const Product = ({ title, price, rating, imgSrc, imgAlt }: ProductProps) 
                     marginBottom: "1%",
                 }}
             />
-            <ShopProductButton variant="contained" color="secondary" endIcon={<ShoppingCartIcon />}>Add to Shoppingcart</ShopProductButton>
+            <ShopProductButton 
+                variant="contained"
+                color="secondary"
+                endIcon={<ShoppingCartIcon />}
+                onClick={addToShoppingCart}
+            >
+                Add to Shoppingcart
+            </ShopProductButton>
         </div>
     ) 
 }
