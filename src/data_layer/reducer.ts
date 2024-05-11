@@ -1,7 +1,7 @@
 import { ProductProps } from "../components/Product";
 
 export type State = {
-    shoppingCart: ProductProps[];
+    shoppingCartItems: ProductProps[];
 };
 
 export type Action = {
@@ -12,7 +12,7 @@ export type Action = {
 export type Reducer = (state: State, action: Action) => State;
 
 export const initialState: State = {
-    shoppingCart: [],
+    shoppingCartItems: [],
 }
 
 export const reducer: Reducer = (state, action) => {
@@ -20,7 +20,7 @@ export const reducer: Reducer = (state, action) => {
         case "ADD_TO_SHOPPING_CART": 
             return {
                 ...state,
-                shoppingCart: [...state.shoppingCart, action.item],
+                shoppingCartItems: [...state.shoppingCartItems, action.item],
             }
     }
   }
