@@ -1,7 +1,8 @@
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useStateReducer } from '../data_layer/useStateReducer';
 
 export const ShoppingCart = () => {
-    const count = 0
+    const [{ shoppingCart }] = useStateReducer();
 
     return (
         <div style={{
@@ -11,7 +12,7 @@ export const ShoppingCart = () => {
         }}>
             <ShoppingCartIcon />
             <span>
-                {count}
+                {shoppingCart.length}
             </span>
         </div>
     )
